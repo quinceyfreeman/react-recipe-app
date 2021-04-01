@@ -1,9 +1,12 @@
-import Recipe from './Recipe'
+import RecipeCard from './RecipeCard'
 
-const RecipeList = ({ recipeList }) => {
+const RecipeList = ({ category, recipeList, onClick }) => {
     return (
         <div>
-            {recipeList.map((recipe) => <Recipe key={ recipe.id } recipe={ recipe } /> )}
+            <h2>{category}</h2>
+            <div className='recipe-categories'>
+                {recipeList.map((recipe) => <RecipeCard key={ recipe.id } recipe={ recipe } onClick={onClick} /> )}
+            </div>
         </div>
     )
 }
