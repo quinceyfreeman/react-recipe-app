@@ -2,10 +2,10 @@ const RecipeCard = ({ recipe, onClick}) => {
     return (
         <div>
             <div className='recipe-card' onClick={onClick}>
-                    <img className='recipe-card__img' src={recipe.imageUrl} alt={'image for ' + recipe.name + ' recipe'} />
+                <img className='recipe-card__img' src={recipe.imageUrl} alt={'image for ' + recipe.name + ' recipe'} />
                 <div className='recipe-card__info'>
                     <h3>{recipe.name}</h3>
-                    <p>{recipe.decription}</p>
+                    <p>{recipe.description}</p>
                 </div>
 
             {/* Use to get ingredients and steps */}
